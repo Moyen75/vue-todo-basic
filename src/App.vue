@@ -16,5 +16,6 @@ components:{
 <style scoped>
  .app{
   width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
 </style>

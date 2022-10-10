@@ -1,6 +1,6 @@
 <template>
     <div class="todo-list">
-   <Todo :todos="todos"></Todo>
+   <Todo ></Todo>
   </div>
 </template>
 
@@ -8,7 +8,10 @@
 import Todo from './Todo.vue';
 export default {
    props:{
-    todos:Array
+      tasks:{
+         type:Array,
+         required:true
+      }
    },
    components:{
     Todo

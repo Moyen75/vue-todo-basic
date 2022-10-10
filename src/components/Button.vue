@@ -1,6 +1,6 @@
 <template>
     <div>
-     <button >{{text}}</button>
+     <button @click="toggleButton" :style="{backgroundColor:bgColor,color:color}">{{text}}</button>
     </div>
 </template>
 
@@ -8,7 +8,13 @@
     export default {
         props:{
             text:String,
+            bgColor:String,
             color:String
+        },
+        methods:{
+            toggleButton(){
+                this.$emit('toggle-button')
+            }
         }
     }
 </script>
@@ -16,10 +22,8 @@
 <style lang="css" scoped>
 button{
     border: none;
-    background-color: skyblue;
     padding: 10px 15px;
     font-size: 20px;
-    color: darkblue;
     border-radius: 5px;
     cursor: pointer;
 }

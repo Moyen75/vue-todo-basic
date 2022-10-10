@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TaskForm @add-task="addTask"></TaskForm>
+        <TaskForm ></TaskForm>
     </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
     },
     methods:{
         addTask(task){
-          this.$emit('add-task',task)
+            this.$emit("add-task",task)
       }
     }
 }
